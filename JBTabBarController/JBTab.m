@@ -39,6 +39,7 @@
 
 @property(nonatomic,strong) tapBlock                 touchDownBlock;
 
+-(void)configureViewsSelected:(BOOL)selected;
 @end 
 
 @implementation JBTab 

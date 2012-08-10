@@ -29,6 +29,8 @@
 
 @interface JBTabBar()
 -(JBTab*) tabWithTabBarItem:(UITabBarItem*)item;
+-(BOOL) shouldLayout;
+- (void) layoutWithBlock:(JBLayoutBlock)block;
 @end
 
 static CGSize const kDefaultSize = {320.0f, 49.0f};

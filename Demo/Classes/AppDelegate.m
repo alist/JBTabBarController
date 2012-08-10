@@ -27,7 +27,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.    
     _layoutStrategy = JBTabBarLayoutStrategyFill;
-    _numberOfTabs = 5;
+    _numberOfTabs = 2;
     [self buildTabBarControllerWithLayoutStrategy:_layoutStrategy numberOfTabs:_numberOfTabs];
 
     [self.window makeKeyAndVisible];
@@ -36,7 +36,10 @@
 
 - (void) buildTabBarControllerWithLayoutStrategy:(JBTabBarLayoutStrategy)layoutStrategy numberOfTabs:(NSUInteger)numberOfTabs {
     JBTabBarController* tabBarController = [[JBTabBarController alloc] init];
-    
+	[tabBarController.view isHidden];
+    [tabBarController.tabBar setBackgroundImage:[[UIImage imageNamed:@"tabBarBackground.png"] resizableImageWithCapInsets:UIEdgeInsetsZero]];
+    [tabBarController.tabBar setSelectionIndicatorImage:[[UIImage imageNamed:@"tabBarSelectedTabOverlay.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)]];
+	
     NSMutableArray* controllers = [NSMutableArray arrayWithObject:[[UINavigationController alloc] initWithRootViewController:[[FirstViewController alloc] init]]];
     
     if (numberOfTabs > 1) {

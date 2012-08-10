@@ -46,6 +46,10 @@
 		0EC2725A14F1D46300C8FC3E /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2725914F1D46300C8FC3E /* FourthViewController.m */; };
 		0EC2729914F1E14D00C8FC3E /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2729814F1E14D00C8FC3E /* FifthViewController.m */; };
 		0ECA383D1531A6EF00A4F4E1 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA38201531A6EF00A4F4E1 /* JRSwizzle.m */; };
+		79FB5E5D15D5738800F39108 /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FB5E5915D5738600F39108 /* tabBarBackground.png */; };
+		79FB5E5E15D5738800F39108 /* tabBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FB5E5A15D5738600F39108 /* tabBarBackground@2x.png */; };
+		79FB5E6315D5757B00F39108 /* tabBarSelectedTabOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FB5E6115D5757700F39108 /* tabBarSelectedTabOverlay.png */; };
+		79FB5E6415D5757B00F39108 /* tabBarSelectedTabOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FB5E6215D5757800F39108 /* tabBarSelectedTabOverlay@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +74,7 @@
 		0E7D3FE014DB31CF00E2D3A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E9C76BA14F2EBDD00BF8FC2 /* JBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTabBar.h; sourceTree = "<group>"; };
 		0E9C76BB14F2EBDD00BF8FC2 /* JBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTabBar.m; sourceTree = "<group>"; };
-		0E9C76BC14F2EBDD00BF8FC2 /* JBTab.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JBTab.h; sourceTree = "<group>"; };
+		0E9C76BC14F2EBDD00BF8FC2 /* JBTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTab.h; sourceTree = "<group>"; };
 		0E9C76BD14F2EBDD00BF8FC2 /* JBTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTab.m; sourceTree = "<group>"; };
 		0E9C76BE14F2EBDD00BF8FC2 /* JBTabBarController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JBTabBarController.bundle; sourceTree = "<group>"; };
 		0E9C76BF14F2EBDD00BF8FC2 /* JBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTabBarController.h; sourceTree = "<group>"; };
@@ -105,6 +109,10 @@
 		0ECA381F1531A6EF00A4F4E1 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		0ECA38201531A6EF00A4F4E1 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 		0EE0BBB11532CAF100E1B5C5 /* JBTabBarController+ConvenienceMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JBTabBarController+ConvenienceMethods.h"; sourceTree = "<group>"; };
+		79FB5E5915D5738600F39108 /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarBackground.png; sourceTree = "<group>"; };
+		79FB5E5A15D5738600F39108 /* tabBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarBackground@2x.png"; sourceTree = "<group>"; };
+		79FB5E6115D5757700F39108 /* tabBarSelectedTabOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarSelectedTabOverlay.png; sourceTree = "<group>"; };
+		79FB5E6215D5757800F39108 /* tabBarSelectedTabOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarSelectedTabOverlay@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +272,10 @@
 		0E9C76F614F2EC0C00BF8FC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79FB5E6115D5757700F39108 /* tabBarSelectedTabOverlay.png */,
+				79FB5E6215D5757800F39108 /* tabBarSelectedTabOverlay@2x.png */,
+				79FB5E5915D5738600F39108 /* tabBarBackground.png */,
+				79FB5E5A15D5738600F39108 /* tabBarBackground@2x.png */,
 				0E9C76C814F2EC0600BF8FC2 /* Icons */,
 			);
 			name = Resources;
@@ -276,7 +288,7 @@
 				0ECA38201531A6EF00A4F4E1 /* JRSwizzle.m */,
 			);
 			name = JRSwizzle;
-			path = ../JRSwizzle;
+			path = ../JRSwizzled;
 			sourceTree = "<group>";
 		};
 		0EE0BBB31532CAFF00E1B5C5 /* JBTabBarController */ = {
@@ -379,6 +391,10 @@
 				0E9C76F314F2EC0600BF8FC2 /* Levitate-selected@2x.png in Resources */,
 				0E9C76F414F2EC0600BF8FC2 /* Levitate-unselected.png in Resources */,
 				0E9C76F514F2EC0600BF8FC2 /* Levitate-unselected@2x.png in Resources */,
+				79FB5E5D15D5738800F39108 /* tabBarBackground.png in Resources */,
+				79FB5E5E15D5738800F39108 /* tabBarBackground@2x.png in Resources */,
+				79FB5E6315D5757B00F39108 /* tabBarSelectedTabOverlay.png in Resources */,
+				79FB5E6415D5757B00F39108 /* tabBarSelectedTabOverlay@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

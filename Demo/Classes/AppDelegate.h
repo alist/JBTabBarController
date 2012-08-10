@@ -15,4 +15,6 @@
 @property (nonatomic) NSUInteger numberOfTabs;
 @property (nonatomic) JBTabBarLayoutStrategy layoutStrategy;
 
+- (void) buildTabBarControllerWithLayoutStrategy:(JBTabBarLayoutStrategy)layoutStrategy numberOfTabs:(NSUInteger)numberOfTabs;
+
 @end
