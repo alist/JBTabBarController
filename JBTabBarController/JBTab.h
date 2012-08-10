@@ -40,11 +40,12 @@ typedef void (^tapBlock)();
 @property(nonatomic,readonly,strong) UILabel        *titleLabel;
 @property(nonatomic,readonly,strong) UIImageView    *imageView;
 @property(nonatomic,strong) UIImage                 *selectedBackgroundImage;
+@property(nonatomic, assign) double					titleBottomMargin;
+
+@property(nonatomic,strong) tapBlock                 touchDownBlock;
 
 - (void) setTitleColor:(UIColor*)titleColor selected:(BOOL)selected;
 - (void) setTitleShadowColor:(UIColor*)titleShadowColor selected:(BOOL)selected;
 - (void) setImage:(UIImage*)image selected:(BOOL)selected;
-
-- (void) setTouchDownBlock:(tapBlock)block;
 
 @end

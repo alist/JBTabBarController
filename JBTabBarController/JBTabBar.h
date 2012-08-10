@@ -71,6 +71,9 @@ typedef void (^JBLayoutBlock) (JBTab* tab, NSUInteger index, NSUInteger numberOf
 @property(nonatomic,strong) UIImage *backgroundImage;
 @property(nonatomic,strong) UIImage *selectionIndicatorImage; 
 
+@property (nonatomic,strong) UIFont * tabTitleFont;
+@property (nonatomic, assign) double tabTitleBottomMargin;
+
 @end
 
 @protocol JBTabBarDelegate<NSObject>

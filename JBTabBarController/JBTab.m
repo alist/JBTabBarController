@@ -37,8 +37,6 @@
 @property(nonatomic,strong) UIColor                 *selectedTitleShadowColor;
 @property(nonatomic,strong) UIImage                 *selectedImage;
 
-@property(nonatomic,strong) tapBlock                 touchDownBlock;
-
 -(void)configureViewsSelected:(BOOL)selected;
 @end 
 
@@ -53,6 +51,7 @@
 @synthesize selectedTitleColor = _selectedTitleColor;
 @synthesize selectedTitleShadowColor = _selectedTitleShadowColor;
 @synthesize selectedImage = _selectedImage;
+@synthesize titleBottomMargin;
 
 @synthesize touchDownBlock = _touchDownBlock;
 
@@ -68,6 +67,8 @@
         _backgroundView = [[UIImageView alloc] init];
         _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:_backgroundView];
+		
+		self.titleBottomMargin = 0;
         
         _imageView = [[UIImageView alloc] init];
         [self addSubview:_imageView];
@@ -98,8 +99,11 @@
     if (self.currentImage && self.title) {
         CGFloat imageHeight = self.bounds.size.height - titleSize.height - paddingV;
         
-        self.imageView.frame = CGRectMake(paddingH, paddingV, requiredWidth, imageHeight); 
-        
+		CGRect imageViewFrame = CGRectMake(paddingH, paddingV, self.imageView.image.size.width, self.imageView.image.size.height);
+		imageViewFrame.origin = CGPointMake(roundf([self bounds].size.width/2 - imageViewFrame.size.width/2),roundf([self.imageView center].y + paddingV));
+        self.imageView.frame = imageViewFrame;
+		
+		
         self.titleLabel.frame = CGRectMake(paddingH, imageHeight + paddingV, requiredWidth, titleSize.height);  
     } else if (!self.currentImage && self.title) {
         self.titleLabel.frame = CGRectMake(paddingH, (self.bounds.size.height-titleSize.height)/2, requiredWidth, titleSize.height);   
@@ -108,6 +112,8 @@
         CGFloat paddingV = (self.bounds.size.height - imageSize.height)/2;
         self.imageView.frame = CGRectMake(roundf((self.bounds.size.width - imageSize.width)/2), roundf(paddingV), roundf(imageSize.width), roundf(imageSize.height));
     }    
+	
+	[self.titleLabel setOrigin:CGPointMake(self.titleLabel.frame.origin.x, self.titleLabel.frame.origin.y - self.titleBottomMargin)];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

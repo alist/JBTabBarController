@@ -46,13 +46,17 @@ static CGSize const kDefaultSize = {320.0f, 49.0f};
 @synthesize layoutStrategy = _layoutStrategy;
 @synthesize maximumTabWidth = _maximumTabWidth;
 @synthesize layoutBlock = _layoutBlock;
+@synthesize tabTitleFont,tabTitleBottomMargin;
 
 - (id) init
 {
     if (self = [super init])
     {
         self.maximumTabWidth = CGFLOAT_MAX;
-        
+		
+		self.tabTitleFont = [UIFont boldSystemFontOfSize:10.0f];
+        self.tabTitleBottomMargin = 0;
+		
         self.backgroundColor = [UIColor blackColor];
         _backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
         _backgroundView.backgroundColor = [UIColor blackColor];
@@ -185,10 +189,12 @@ static CGSize const kDefaultSize = {320.0f, 49.0f};
 - (JBTab*) tabWithTabBarItem:(UITabBarItem *)item
 {
     JBTab* tab = [[JBTab alloc] init];
-    tab.titleLabel.font = [UIFont boldSystemFontOfSize:10.0f];
+    tab.titleLabel.font = self.tabTitleFont;
     tab.titleLabel.textAlignment = UITextAlignmentCenter;
     tab.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    
+    tab.titleBottomMargin = self.tabTitleBottomMargin;
+	
+	
     [tab setTitleColor:[UIColor colorWithWhite:0.6f alpha:1.0f] selected:NO];
     [tab setTitleColor:[UIColor whiteColor] selected:YES];
         
