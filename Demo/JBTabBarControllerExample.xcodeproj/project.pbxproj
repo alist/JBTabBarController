@@ -288,7 +288,7 @@
 				0ECA38201531A6EF00A4F4E1 /* JRSwizzle.m */,
 			);
 			name = JRSwizzle;
-			path = ../JRSwizzled;
+			path = ../JRSwizzle;
 			sourceTree = "<group>";
 		};
 		0EE0BBB31532CAFF00E1B5C5 /* JBTabBarController */ = {
