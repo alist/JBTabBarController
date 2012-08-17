@@ -150,7 +150,10 @@
 }
 
 - (void)setSelectedViewController:(UIViewController *)selectedViewController {
-    if (selectedViewController != _selectedViewController && [_viewControllers containsObject:selectedViewController]) {
+	if ([_viewControllers containsObject:selectedViewController] == FALSE)
+		return;
+	
+    if (selectedViewController != _selectedViewController) {
         NSArray *versionInfo = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
         BOOL notifyViews  = [[versionInfo objectAtIndex:0] intValue] < 5;
         
@@ -170,7 +173,11 @@
         if (self.tabBar.selectedItem != _selectedViewController.tabBarItem) {
             self.tabBar.selectedItem = _selectedViewController.tabBarItem;
         }
-    }
+    }else if (selectedViewController == _selectedViewController){
+		if ([_selectedViewController isKindOfClass:[UINavigationController class]]){
+			[(UINavigationController*)_selectedViewController popToRootViewControllerAnimated:TRUE];
+		}
+	}
 }
 
 - (UIViewController*) selectedViewController {
