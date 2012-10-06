@@ -100,7 +100,7 @@
         CGFloat imageHeight = self.bounds.size.height - titleSize.height - paddingV;
         
 		CGRect imageViewFrame = CGRectMake(paddingH, paddingV, self.imageView.image.size.width, self.imageView.image.size.height);
-		imageViewFrame.origin = CGPointMake(roundf([self bounds].size.width/2 - imageViewFrame.size.width/2),roundf([self.imageView center].y + paddingV));
+		imageViewFrame.origin = CGPointMake(roundf([self bounds].size.width/2 - imageViewFrame.size.width/2),paddingV);
         self.imageView.frame = imageViewFrame;
 		
 		
